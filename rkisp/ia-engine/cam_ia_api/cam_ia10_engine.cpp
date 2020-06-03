@@ -628,13 +628,13 @@ RESULT CamIA10Engine::updateAwbConfig(struct CamIA10_DyCfg* cfg) {
             } else if (cfg->awb_cfg.mode == HAL_WB_INCANDESCENT) {
                 strcpy(prfName, "A");
             } else if (cfg->awb_cfg.mode == HAL_WB_DAYLIGHT) {
-                strcpy(prfName, "D65");
+                strcpy(prfName, "D50");
             } else if (cfg->awb_cfg.mode == HAL_WB_FLUORESCENT) {
                 strcpy(prfName, "F11_TL84");
             } else if (cfg->awb_cfg.mode == HAL_WB_SUNSET) {
                 strcpy(prfName, "HORIZON"); //not support now
             } else if (cfg->awb_cfg.mode == HAL_WB_CLOUDY_DAYLIGHT) {
-                strcpy(prfName, "F2_CWF");
+                strcpy(prfName, "D65");
             } else if (cfg->awb_cfg.mode == HAL_WB_CANDLE) {
                 strcpy(prfName, "U30"); //not support now
             } else
@@ -737,13 +737,13 @@ RESULT CamIA10Engine::updateAwbConfig(struct CamIA10_DyCfg* cfg) {
                 } else if (cfg->awb_cfg.mode == HAL_WB_INCANDESCENT) {
                     strcpy(prfName, "A");
                 } else if (cfg->awb_cfg.mode == HAL_WB_DAYLIGHT) {
-                    strcpy(prfName, "D65");
+                    strcpy(prfName, "D50");
                 } else if (cfg->awb_cfg.mode == HAL_WB_FLUORESCENT) {
                     strcpy(prfName, "F11_TL84");
                 } else if (cfg->awb_cfg.mode == HAL_WB_SUNSET) {
                     strcpy(prfName, "HORIZON"); //not support now
                 } else if (cfg->awb_cfg.mode == HAL_WB_CLOUDY_DAYLIGHT) {
-                    strcpy(prfName, "F2_CWF");
+                    strcpy(prfName, "D65");
                 } else if (cfg->awb_cfg.mode == HAL_WB_CANDLE) {
                     strcpy(prfName, "U30"); //not support now
                 } else
@@ -2345,13 +2345,13 @@ RESULT CamIA10Engine::runAWB(HAL_AwbCfg* awbHalCfg) {
                 if (awbHalCfg->mode == HAL_WB_INCANDESCENT) {
                     strcpy(prfName, "A");
                 } else if (awbHalCfg->mode == HAL_WB_DAYLIGHT) {
-                    strcpy(prfName, "D65");
+                    strcpy(prfName, "D50");
                 } else if (awbHalCfg->mode == HAL_WB_FLUORESCENT) {
                     strcpy(prfName, "F11_TL84");
                 } else if (awbHalCfg->mode == HAL_WB_SUNSET) {
                     strcpy(prfName, "HORIZON"); //not support now
                 } else if (awbHalCfg->mode == HAL_WB_CLOUDY_DAYLIGHT) {
-                    strcpy(prfName, "F2_CWF");
+                    strcpy(prfName, "D65");
                 } else if (awbHalCfg->mode == HAL_WB_CANDLE) {
                     strcpy(prfName, "U30"); //not support now
                 } else
@@ -2448,13 +2448,13 @@ RESULT CamIA10Engine::runAWB(HAL_AwbCfg* awbHalCfg) {
                     if (awbHalCfg->mode == HAL_WB_INCANDESCENT) {
                         strcpy(prfName, "A");
                     } else if (awbHalCfg->mode == HAL_WB_DAYLIGHT) {
-                        strcpy(prfName, "D65");
+                        strcpy(prfName, "D50");
                     } else if (awbHalCfg->mode == HAL_WB_FLUORESCENT) {
                         strcpy(prfName, "F11_TL84");
                     } else if (awbHalCfg->mode == HAL_WB_SUNSET) {
                         strcpy(prfName, "HORIZON"); //not support now
                     } else if (awbHalCfg->mode == HAL_WB_CLOUDY_DAYLIGHT) {
-                        strcpy(prfName, "F2_CWF");
+                        strcpy(prfName, "D65");
                     } else if (awbHalCfg->mode == HAL_WB_CANDLE) {
                         strcpy(prfName, "U30"); //not support now
                     } else
