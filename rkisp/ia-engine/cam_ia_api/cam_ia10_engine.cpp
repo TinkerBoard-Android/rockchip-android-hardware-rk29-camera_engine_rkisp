@@ -675,7 +675,7 @@ RESULT CamIA10Engine::updateAwbConfig(struct CamIA10_DyCfg* cfg) {
             for (i = 0; i < no; i++) {
                 // get an illumination profile from database
                 result = CamCalibDbGetAwb_V10_IlluminationByIdx(hCamCalibDb, i, &pIlluProfile);
-                if (strstr(pIlluProfile->name, prfName)) {
+                if (0 == strcmp(pIlluProfile->name, prfName)) {
                     awbcfg.idx = i;
                     break;
                 }
@@ -784,7 +784,7 @@ RESULT CamIA10Engine::updateAwbConfig(struct CamIA10_DyCfg* cfg) {
                 for (i = 0; i < no; i++) {
                     // get an illumination profile from database
                     result = CamCalibDbGetAwb_V10_IlluminationByIdx(hCamCalibDb, i, &pIlluProfile);
-                    if (strstr(pIlluProfile->name, prfName)) {
+                    if (0 == strcmp(pIlluProfile->name, prfName)) {
                         awbcfg.idx = i;
                         break;
                     }
